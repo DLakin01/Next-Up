@@ -12,18 +12,23 @@
         <p>A responsive, cutting-edge to-do list app.</p>
         <p>Just enter your tasks for the day below, <br>and track them on all of your devices!</p>
     </header>
-    <img src="assets/images/blankPaper.png">
-      <ul id="todo-list">
-        <li ng-repeat="a in todo.tasks track by $index">
-          {{a}}
-          <button ng-click="todo.deleteTask($index)">Delete</button>
-        </li>
-      </ul>
+    <div class="list-container">
+      <div class="list">
+        <ul id="todo-list">
+          <li ng-repeat="a in todo.tasks track by $index">
+            {{a}}
+            <button ng-click="todo.deleteTask($index)">Delete</button>
+          </li>
+        </ul>
+      </div>
+      <img src="assets/images/blankPaper.png">
+    </div>
+    <div class="form">
       <form ng-submit="todo.createTask()">
         <input type="text" ng-model="todo.newTask">
         <input type="submit">
       </form>
-    </img>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
     <script src="app.js"></script>
   </body>

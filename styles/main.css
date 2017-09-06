@@ -10,7 +10,14 @@ body {
   background-size: cover;
 }
 
- header h1 {
+header {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  float: left;
+}
+
+header h1 {
   position: relative;
   margin: 20px 75px;
   font-family: 'Amatic SC', sans-serif;
@@ -25,10 +32,22 @@ header p {
   width: 239%;
 }
 
-img {
-  position: fixed;
+.list-container {
+  position: relative;
   display: inline-block;
-  width: 45%;
-  left: 50%;
-  top: 20px;
+}
+
+.list {}
+
+.list-container img {
+  display: block;
+  position: relative;
+  width: 100%;
+  left: 0%;
+  top: 30px;
+}
+
+img #todo-list {
+  position: absolute;
+  left: inherit;
 }
